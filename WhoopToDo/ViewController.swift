@@ -24,7 +24,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 50.0
         
     }
     
@@ -39,12 +42,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.textLabel?.backgroundColor = UIColor.clear
         
         let listItem = lists[indexPath.row]
         cell.textLabel?.text = listItem.item
         
         return cell
+    }
+    
+    func colorForIndex(index: Int) -> UIColor {
+        let itemCount = lists.count - 1
+        let val = CGFloat(index) / CGFloat(itemCount) * 0.6
+        return UIColor(red: val, green: val, blue: 20.0, alpha: 1.0)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = colorForIndex(index: indexPath.row)
+        cell.textLabel?.textColor = UIColor.white
     }
     
 }
@@ -58,7 +73,7 @@ extension ViewController {
         
         let list = List(context: context)
         
-        //list.item = "master protocols and delegates"
+        list.item = "master protocols and delegates"
         appDelegate.saveContext()
         
         do {
