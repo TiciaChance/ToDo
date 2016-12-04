@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */; };
+		11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */; };
+		11AC8CB41DF3C6F2005DA5DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */; };
+		11AC8CB71DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CB51DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld */; };
+		11AC8CB91DF3C6F2005DA5DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AC8CB81DF3C6F2005DA5DD /* Assets.xcassets */; };
+		11AC8CBC1DF3C6F2005DA5DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AC8CBA1DF3C6F2005DA5DD /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11AC8CAB1DF3C6F2005DA5DD /* WhoopToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11AC8CB31DF3C6F2005DA5DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11AC8CB61DF3C6F2005DA5DD /* WhoopToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WhoopToDo.xcdatamodel; sourceTree = "<group>"; };
+		11AC8CB81DF3C6F2005DA5DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		11AC8CBB1DF3C6F2005DA5DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		11AC8CBD1DF3C6F2005DA5DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11AC8CA81DF3C6F1005DA5DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11AC8CA21DF3C6F1005DA5DD = {
+			isa = PBXGroup;
+			children = (
+				11AC8CAD1DF3C6F2005DA5DD /* WhoopToDo */,
+				11AC8CAC1DF3C6F2005DA5DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11AC8CAC1DF3C6F2005DA5DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11AC8CAB1DF3C6F2005DA5DD /* WhoopToDo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11AC8CAD1DF3C6F2005DA5DD /* WhoopToDo */ = {
+			isa = PBXGroup;
+			children = (
+				11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */,
+				11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */,
+				11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */,
+				11AC8CB81DF3C6F2005DA5DD /* Assets.xcassets */,
+				11AC8CBA1DF3C6F2005DA5DD /* LaunchScreen.storyboard */,
+				11AC8CBD1DF3C6F2005DA5DD /* Info.plist */,
+				11AC8CB51DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld */,
+			);
+			path = WhoopToDo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11AC8CAA1DF3C6F1005DA5DD /* WhoopToDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11AC8CC01DF3C6F2005DA5DD /* Build configuration list for PBXNativeTarget "WhoopToDo" */;
+			buildPhases = (
+				11AC8CA71DF3C6F1005DA5DD /* Sources */,
+				11AC8CA81DF3C6F1005DA5DD /* Frameworks */,
+				11AC8CA91DF3C6F1005DA5DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhoopToDo;
+			productName = WhoopToDo;
+			productReference = 11AC8CAB1DF3C6F2005DA5DD /* WhoopToDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11AC8CA31DF3C6F1005DA5DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Laticia Chance";
+				TargetAttributes = {
+					11AC8CAA1DF3C6F1005DA5DD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 11AC8CA61DF3C6F1005DA5DD /* Build configuration list for PBXProject "WhoopToDo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11AC8CA21DF3C6F1005DA5DD;
+			productRefGroup = 11AC8CAC1DF3C6F2005DA5DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11AC8CAA1DF3C6F1005DA5DD /* WhoopToDo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11AC8CA91DF3C6F1005DA5DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AC8CBC1DF3C6F2005DA5DD /* LaunchScreen.storyboard in Resources */,
+				11AC8CB91DF3C6F2005DA5DD /* Assets.xcassets in Resources */,
+				11AC8CB41DF3C6F2005DA5DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11AC8CA71DF3C6F1005DA5DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */,
+				11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */,
+				11AC8CB71DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AC8CB31DF3C6F2005DA5DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11AC8CBA1DF3C6F2005DA5DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AC8CBB1DF3C6F2005DA5DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11AC8CBE1DF3C6F2005DA5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		11AC8CBF1DF3C6F2005DA5DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11AC8CC11DF3C6F2005DA5DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WhoopToDo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ElectricChance.WhoopToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		11AC8CC21DF3C6F2005DA5DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WhoopToDo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ElectricChance.WhoopToDo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11AC8CA61DF3C6F1005DA5DD /* Build configuration list for PBXProject "WhoopToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AC8CBE1DF3C6F2005DA5DD /* Debug */,
+				11AC8CBF1DF3C6F2005DA5DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11AC8CC01DF3C6F2005DA5DD /* Build configuration list for PBXNativeTarget "WhoopToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AC8CC11DF3C6F2005DA5DD /* Debug */,
+				11AC8CC21DF3C6F2005DA5DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11AC8CB51DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11AC8CB61DF3C6F2005DA5DD /* WhoopToDo.xcdatamodel */,
+			);
+			currentVersion = 11AC8CB61DF3C6F2005DA5DD /* WhoopToDo.xcdatamodel */;
+			path = WhoopToDo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 11AC8CA31DF3C6F1005DA5DD /* Project object */;
+}
