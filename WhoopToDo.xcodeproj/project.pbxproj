@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		119AADFD1DF4773B00D6AB1D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */; };
 		11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */; };
 		11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */; };
 		11AC8CB41DF3C6F2005DA5DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		11AC8CAB1DF3C6F2005DA5DD /* WhoopToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */,
 				11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */,
 				11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */,
+				119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */,
 				11AC8CB81DF3C6F2005DA5DD /* Assets.xcassets */,
 				11AC8CBA1DF3C6F2005DA5DD /* LaunchScreen.storyboard */,
 				11AC8CBD1DF3C6F2005DA5DD /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */,
 				11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */,
+				119AADFD1DF4773B00D6AB1D /* ToDoItem.swift in Sources */,
 				11AC8CB71DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +307,7 @@
 				11AC8CC21DF3C6F2005DA5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

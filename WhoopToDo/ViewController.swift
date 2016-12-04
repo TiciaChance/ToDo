@@ -9,16 +9,47 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var list: [NSManagedObject] = []
+    var lists : [List] = []
+    
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         coreDataInit()
         
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lists.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
+        
+        let listItem = lists[indexPath.row]
+        cell.textLabel?.text = listItem.item
+        
+        return cell
+    }
+    
+}
+
+extension ViewController {
     
     func coreDataInit() {
         
@@ -33,7 +64,7 @@ class ViewController: UIViewController {
         do {
             
             let result = try context.fetch(List.fetchRequest())
-            let lists = result as! [List]
+            lists = result as! [List]
             
             for list in lists {
                 
@@ -44,7 +75,5 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    
-}
 
+}
