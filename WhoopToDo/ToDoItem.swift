@@ -9,10 +9,6 @@
 import UIKit
 import CoreData
 
-protocol TableViewCellDelegate {
-    func toDoItemDeleted(todoItem: ToDoItem)
-}
-
 class ToDoItem: NSObject {
     
     

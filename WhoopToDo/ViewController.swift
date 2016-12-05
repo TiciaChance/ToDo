@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    func toDoItemDeleted(todoItem toDoItem: ToDoItem) {
+    func toDoItemDeleted(_ toDoItem: ToDoItem) {
         
         let index = (toDoItems as NSArray).index(of: toDoItem)
         if index == NSNotFound { return }
@@ -82,11 +82,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.textLabel?.backgroundColor = UIColor.clear
+        //cell.textLabel?.backgroundColor = UIColor.clear
         cell.selectionStyle = .none
         
         let item = toDoItems[indexPath.row]
-        cell.textLabel?.text = item.text
+     //   cell.textLabel?.text = item.text
         
         cell.delegate = self
         cell.toDoItem = item

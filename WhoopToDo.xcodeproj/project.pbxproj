@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		119AADFD1DF4773B00D6AB1D /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */; };
 		119AADFF1DF4834900D6AB1D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AADFE1DF4834900D6AB1D /* TableViewCell.swift */; };
+		119AAE051DF5326500D6AB1D /* StrikeThroughText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119AAE041DF5326500D6AB1D /* StrikeThroughText.swift */; };
 		11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */; };
 		11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */; };
 		11AC8CB41DF3C6F2005DA5DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		119AADFE1DF4834900D6AB1D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		119AAE041DF5326500D6AB1D /* StrikeThroughText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrikeThroughText.swift; path = ../StrikeThroughText.swift; sourceTree = "<group>"; };
 		11AC8CAB1DF3C6F2005DA5DD /* WhoopToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoopToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		119AAE001DF4835700D6AB1D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				119AAE041DF5326500D6AB1D /* StrikeThroughText.swift */,
 				11AC8CB21DF3C6F2005DA5DD /* Main.storyboard */,
 				119AADFE1DF4834900D6AB1D /* TableViewCell.swift */,
 			);
@@ -171,6 +174,7 @@
 			files = (
 				119AADFF1DF4834900D6AB1D /* TableViewCell.swift in Sources */,
 				11AC8CB11DF3C6F2005DA5DD /* ViewController.swift in Sources */,
+				119AAE051DF5326500D6AB1D /* StrikeThroughText.swift in Sources */,
 				11AC8CAF1DF3C6F2005DA5DD /* AppDelegate.swift in Sources */,
 				119AADFD1DF4773B00D6AB1D /* ToDoItem.swift in Sources */,
 				11AC8CB71DF3C6F2005DA5DD /* WhoopToDo.xcdatamodeld in Sources */,
