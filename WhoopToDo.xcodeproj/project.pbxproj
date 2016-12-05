@@ -50,6 +50,22 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		119AAE021DF491F400D6AB1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		119AAE031DF491FE00D6AB1D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		11AC8CA21DF3C6F1005DA5DD = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +86,9 @@
 			isa = PBXGroup;
 			children = (
 				11AC8CAE1DF3C6F2005DA5DD /* AppDelegate.swift */,
-				11AC8CB01DF3C6F2005DA5DD /* ViewController.swift */,
+				119AAE031DF491FE00D6AB1D /* Controller */,
 				119AAE001DF4835700D6AB1D /* View */,
-				119AADFC1DF4773B00D6AB1D /* ToDoItem.swift */,
+				119AAE021DF491F400D6AB1D /* Model */,
 				11AC8CB81DF3C6F2005DA5DD /* Assets.xcassets */,
 				11AC8CBA1DF3C6F2005DA5DD /* LaunchScreen.storyboard */,
 				11AC8CBD1DF3C6F2005DA5DD /* Info.plist */,

@@ -9,9 +9,16 @@
 import UIKit
 import QuartzCore
 
+
+
 class TableViewCell: UITableViewCell {
 
     let gradientLayer = CAGradientLayer()
+    var originalCenter = CGPoint()
+    var deleteOnDragRelease = false
+    
+    var delegate: TableViewCellDelegate?
+    var toDoItem: ToDoItem?
     
     required init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
@@ -34,6 +41,52 @@ class TableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         gradientLayer.frame = bounds
+        
+        let recognizer = UIPanGestureRecognizer(target: self, action: #selector (TableViewCell.handlePan(recognizer:)))
+        
+        recognizer.delegate = self
+        addGestureRecognizer(recognizer)
+    }
+
+    func handlePan(recognizer: UIPanGestureRecognizer) {
+    
+        if recognizer.state == .began {
+            originalCenter = center
+        }
+    
+        if recognizer.state == .changed {
+            let translation = recognizer.translation(in: self)
+            center = CGPoint(x: originalCenter.x + translation.x, y: originalCenter.y)
+            
+            //basically this determines where the cells position qualifies as delete, rn i'll keep it at half way
+            deleteOnDragRelease = frame.origin.x < -frame.size.width / 2.0
+        }
+        // 3
+        if recognizer.state == .ended {
+            let originalFrame = CGRect(x: 0, y: frame.origin.y,
+                                       width: bounds.size.width, height: bounds.size.height)
+            if !deleteOnDragRelease {
+                UIView.animate(withDuration: 0.2, animations: {self.frame = originalFrame})
+            }
+            if deleteOnDragRelease {
+                if delegate != nil && toDoItem != nil {
+                    delegate!.toDoItemDeleted(todoItem: toDoItem!)
+                }
+            }
+        }
+    }
+    
+    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        //says bye girl! to the possibility of a vertical gesture 
+        if let panGestureRecognizer = gestureRecognizer as? UIPanGestureRecognizer {
+            let translation = panGestureRecognizer.translation(in: superview!)
+            if fabs(translation.x) > fabs(translation.y) {
+                return true
+            }
+            return false
+        }
+        return false
     }
 
 }

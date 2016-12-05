@@ -7,20 +7,40 @@
 //
 
 import UIKit
-import CoreData
+//import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate{
     
-    var list: [NSManagedObject] = []
-    var lists : [List] = []
-    
+   // var TDItemClass = ToDoItem(text: "")
+   // var toDoItems = [List]()
+    var toDoItems = [ToDoItem]()
+
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        coreDataInit()
+        if toDoItems.count > 0 {
+            return
+        }
+        
+        
+        toDoItems.append(ToDoItem(text: "feed the cat"))
+        toDoItems.append(ToDoItem(text: "buy eggs"))
+        toDoItems.append(ToDoItem(text: "watch WWDC videos"))
+        toDoItems.append(ToDoItem(text: "rule the Web"))
+        toDoItems.append(ToDoItem(text: "buy a new iPhone"))
+        toDoItems.append(ToDoItem(text: "darn holes in socks"))
+        toDoItems.append(ToDoItem(text: "write this tutorial"))
+        toDoItems.append(ToDoItem(text: "master Swift"))
+        toDoItems.append(ToDoItem(text: "learn to draw"))
+        toDoItems.append(ToDoItem(text: "get more exercise"))
+        toDoItems.append(ToDoItem(text: "catch up with Mom"))
+        toDoItems.append(ToDoItem(text: "get a hair cut"))
+     //   toDoItems = TDItemClass.lists
+
+       // TDItemClass.coreDataInit()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -28,15 +48,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.separatorStyle = .none
         tableView.rowHeight = 50.0
+        tableView.backgroundColor = UIColor.black
         
     }
+    
+    func toDoItemDeleted(todoItem toDoItem: ToDoItem) {
+        
+        let index = (toDoItems as NSArray).index(of: toDoItem)
+        if index == NSNotFound { return }
+        
+        // could removeAtIndex in the loop but keep it here for when indexOfObject works
+        toDoItems.remove(at: index)
+        
+        // use the UITableView to animate the removal of this row
+        tableView.beginUpdates()
+        let indexPathForRow = IndexPath(row: index, section: 0)
+    
+        tableView.deleteRows(at: [indexPathForRow], with: .fade)
+        tableView.endUpdates()    
+    }
+    
+    //MARK : TABLE VIEW methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lists.count
+        return toDoItems.count
         
     }
     
@@ -44,15 +83,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
         cell.textLabel?.backgroundColor = UIColor.clear
+        cell.selectionStyle = .none
         
-        let listItem = lists[indexPath.row]
-        cell.textLabel?.text = listItem.item
+        let item = toDoItems[indexPath.row]
+        cell.textLabel?.text = item.text
+        
+        cell.delegate = self
+        cell.toDoItem = item
         
         return cell
     }
     
     func colorForIndex(index: Int) -> UIColor {
-        let itemCount = lists.count - 1
+        let itemCount = toDoItems.count - 1
         let val = CGFloat(index) / CGFloat(itemCount) * 0.6
         return UIColor(red: val, green: val, blue: 20.0, alpha: 1.0)
     }
@@ -64,31 +107,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
 }
 
-extension ViewController {
-    
-    func coreDataInit() {
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let list = List(context: context)
-        
-        list.item = "master protocols and delegates"
-        appDelegate.saveContext()
-        
-        do {
-            
-            let result = try context.fetch(List.fetchRequest())
-            lists = result as! [List]
-            
-            for list in lists {
-                
-                print("Item: \(list.item)")
-            }
-        } catch {
-            print("Error")
-        }
-        
-    }
-
-}
