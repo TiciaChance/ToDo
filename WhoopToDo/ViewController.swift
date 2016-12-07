@@ -62,12 +62,31 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - TableViewCellDelegate methods
 
     func cellDidBeginEditing(editingCell: TableViewCell) {
-        
+        let editingOffset = tableView.contentOffset.y - editingCell.frame.origin.y as CGFloat
+        let visibleCells = tableView.visibleCells as! [TableViewCell]
+        for cell in visibleCells {
+            UIView.animate(withDuration: 0.3, animations: {() in
+                cell.transform = CGAffineTransform(translationX: 0, y: editingOffset)
+                if cell !== editingCell {
+                    cell.alpha = 0.3
+                }
+            })
+        }
     }
     
     func cellDidEndEditing(editingCell: TableViewCell) {
-        
+        let visibleCells = tableView.visibleCells as! [TableViewCell]
+        for cell: TableViewCell in visibleCells {
+            UIView.animate(withDuration: 0.3, animations: {() in
+                cell.transform = CGAffineTransform.identity
+                if cell !== editingCell {
+                    cell.alpha = 1.0
+                }
+            })
+        }
     }
+    
+    //DELETE
     
     func toDoItemDeleted(_ toDoItem: ToDoItem) {
         //why is index an optional if I change it to a [Type] or don't specify the type
