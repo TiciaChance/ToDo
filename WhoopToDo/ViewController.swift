@@ -11,15 +11,20 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TableViewCellDelegate{
     
-   // var TDItemClass = ToDoItem(text: "")
-   // var toDoItems = [List]()
+    // var TDItemClass = ToDoItem(text: "")
+    // var toDoItems = [List]()
     var toDoItems = [ToDoItem]()
-
+    
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //to do items is an array of the toDoItem class
+        // i need an array of the List class created in Core Data
+        // store the the user's input/text in list.item = allows me to store the users text into CD
+        //
         
         if toDoItems.count > 0 {
             return
@@ -38,9 +43,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         toDoItems.append(ToDoItem(text: "get more exercise"))
         toDoItems.append(ToDoItem(text: "catch up with Mom"))
         toDoItems.append(ToDoItem(text: "get a hair cut"))
-     //   toDoItems = TDItemClass.lists
-
-       // TDItemClass.coreDataInit()
+        //   toDoItems = TDItemClass.lists
+        
+        // TDItemClass.coreDataInit()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -48,24 +53,61 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         tableView.separatorStyle = .none
         tableView.rowHeight = 50.0
+        
+        //change to image when done
         tableView.backgroundColor = UIColor.black
         
     }
     
-    func toDoItemDeleted(_ toDoItem: ToDoItem) {
+    // MARK: - TableViewCellDelegate methods
+
+    func cellDidBeginEditing(editingCell: TableViewCell) {
         
+    }
+    
+    func cellDidEndEditing(editingCell: TableViewCell) {
+        
+    }
+    
+    func toDoItemDeleted(_ toDoItem: ToDoItem) {
+        //why is index an optional if I change it to a [Type] or don't specify the type
         let index = (toDoItems as NSArray).index(of: toDoItem)
         if index == NSNotFound { return }
         
         // could removeAtIndex in the loop but keep it here for when indexOfObject works
         toDoItems.remove(at: index)
         
+        let visibleCells = tableView.visibleCells as! [TableViewCell]
+        let lastView = visibleCells[visibleCells.count - 1] as TableViewCell
+        var delay = 0.0
+        var startAnimating = false
+        for i in 0..<visibleCells.count {
+            let cell = visibleCells[i]
+            if startAnimating {
+                UIView.animate(withDuration: 0.3, delay: delay, options: .curveEaseInOut,
+                               animations: {() in
+                                cell.frame = cell.frame.offsetBy(dx: 0.0,
+                                                                 dy: -cell.frame.size.height)},
+                               completion: {(finished: Bool) in
+                                if (cell == lastView) {
+                                    self.tableView.reloadData()
+                                }
+                }
+                )
+                delay += 0.03
+            }
+            if cell.toDoItem === toDoItem {
+                startAnimating = true
+                cell.isHidden = true
+            }
+        }
+        
         // use the UITableView to animate the removal of this row
         tableView.beginUpdates()
         let indexPathForRow = IndexPath(row: index, section: 0)
-    
+        
         tableView.deleteRows(at: [indexPathForRow], with: .fade)
-        tableView.endUpdates()    
+        tableView.endUpdates()
     }
     
     //MARK : TABLE VIEW methods
@@ -86,7 +128,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.selectionStyle = .none
         
         let item = toDoItems[indexPath.row]
-     //   cell.textLabel?.text = item.text
+        //   cell.textLabel?.text = item.text
         
         cell.delegate = self
         cell.toDoItem = item

@@ -23,6 +23,8 @@ class ToDoItem: NSObject {
     
 }
 
+//this is the only major thing in the code that you'll be changing - don't stress 
+
 //extension ToDoItem{
 
 //-----------------MARK : CORE DATA ------------------------
